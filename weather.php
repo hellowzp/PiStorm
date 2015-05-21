@@ -1,5 +1,8 @@
+
+
 <?php
-require 'PHPMailer-master/PHPMailerAutoload.php';
+
+//require 'PHPMailer-master/PHPMailerAutoload.php';
 //include 'temp.php';
 exec("python weather.py",$temp,$temp1);
 ?>
@@ -7,9 +10,8 @@ exec("python weather.py",$temp,$temp1);
 <html lang="en">
 <head>
 <link rel="stylesheet" href="css/style.css">
-
-<?php 
-
+<?php
+function sendMsg(){
 $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
@@ -91,13 +93,12 @@ sendMsgOff();
 //exec("D:/xampp/htdocs/1.py",$temp,$temp1);
 }
 
-if (isset($_POST['plugon']))
 {
-exec("/usr/local/bin/tdtool -n 1");
+//exec("/usr/local/bin/tdtool -n 1");
 }
 if (isset($_POST['plugoff']))
 {
-exec("/usr/local/bin/tdtool -f 1");
+//exec("/usr/local/bin/tdtool -f 1");
 }
 
 if (isset($_POST['plugon1']))
@@ -148,7 +149,6 @@ if (isset($_POST['livingroom']))
 
 
 ?>
-
   <title>Tell Stick Plug Control</title>
 </head>
 <body>
