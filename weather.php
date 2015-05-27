@@ -4,13 +4,17 @@
 
 //require 'PHPMailer-master/PHPMailerAutoload.php';
 //include 'temp.php';
-exec("python weather.py",$temp,$temp1);
+exec("sudo python project.py",$temp,$temp1);
+//$temp = shell_exec('sudo python project.py');
 ?>
+<meta http-equiv="refresh" content="3" > 
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
 <link rel="stylesheet" href="css/style.css">
 <?php
+
 function sendMsg(){
 $mail = new PHPMailer;
 $mail->isSMTP();
@@ -153,7 +157,7 @@ if (isset($_POST['livingroom']))
 </head>
 <body>
 <h1 style="text-align: center;">GroupT Headquarter</h1>
-<h2 style="text-align: center;">Chance of Rain</h2>
+<h2 style="text-align: center;">Chance of Lightning</h2>
 <div class="container">
     <div class="de">
         <div class="den">
